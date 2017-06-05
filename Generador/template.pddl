@@ -29,6 +29,8 @@
 {5}
 
 {6}
+
+{7}
     )
 
     (:goal
@@ -54,5 +56,5 @@
 		)
     )
 
-	(:metric minimize (coste-total))
+	(:metric minimize (precio_total))
 )

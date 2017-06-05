@@ -75,5 +75,5 @@
 		))
 	)
 
-	(:metric minimize (coste-total))
+	(:metric minimize (precio_total))
 )

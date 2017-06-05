@@ -130,6 +130,18 @@ def predicats_tipus(primers, segons):
     return predicats[:-1]
 
 
+def predicats_obligacio(num, primers, segons):
+    predicats = ''
+    allp = primers + segons
+    dies = ['dilluns', 'dimarts', 'dimecres', 'dijous', 'divendres']
+    for _ in range(num):
+        plat = random.choice(allp)
+        dia = random.choice(dies)
+        pred = '\t\t(obligacion {0} {1})\n'.format(plat.nom, dia)
+        predicats += pred
+    return predicats
+
+
 def genera_incompatibilitats(rand=False, primers=None, segons=None):
     incomp = []
 
@@ -171,6 +183,9 @@ parser.add_argument('--prim', '-p', help='Num primers', type=int,
 parser.add_argument('--seg', '-s', help='Num segons', type=int,
                     default=random.randint(1, PLATS_SEGON), required=False)
 
+parser.add_argument('--obl', '-o', help='Numero de platos obligatorios', type=int,
+                    default=0, required=False)
+
 parser.add_argument(
     '--rand', '-r', help="Genera incompatibilitats a l'atzar", action='store_true')
 
@@ -195,7 +210,8 @@ def main():
         predicats_preus(prim, seg),
         predicats_primers(prim),
         incomp,
-        predicats_tipus(prim, seg)
+        predicats_tipus(prim, seg),
+        predicats_obligacio(parsed.obl, prim, seg)
     )
 
     print('Se ha generado un juego de pruebas con'
