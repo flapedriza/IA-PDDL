@@ -215,8 +215,12 @@ def main():
     )
 
     print('Se ha generado un juego de pruebas con'
-          ' {0} primeros, {1} segundos y {2} incompatibilidades'
-          .format(nprim, nseg, len(incomp.split('\n'))))
+          ' {0} primeros, {1} segundos, {2} incompatibilidades y {3} obligaciones'
+          .format(
+              nprim,
+              nseg,
+              len(incomp.split('\n')),
+              parsed.obl))
 
     with open(parsed.file + '.pddl', 'w') as file:
         file.write(template)
