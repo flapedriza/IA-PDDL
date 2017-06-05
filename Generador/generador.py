@@ -103,7 +103,7 @@ def predicats_preus(primers, segons):
     predicats = ''
 
     for plat in allp:
-        pred = '\t\t(= (precio_plato {0}) {1})\n'.format(plat.nom, plat.cal)
+        pred = '\t\t(= (precio_plato {0}) {1})\n'.format(plat.nom, plat.preu)
         predicats += pred
 
     return predicats[:-1]

@@ -40,8 +40,6 @@
 			(not (primero_asignado ?d))
 			(not (plato_usado ?p))       ;// ?p no debe haber sido ya usado esa semana
 
-			(<= (+ (calorias_dia ?d) (calorias_plato ?p)) 1500)	;;El número de calorías debe ser menor que 1500
-			(>= (+ (calorias_dia ?d) (calorias_plato ?p)) 1000)	;;El número de calorías debe ser mayor que 1000
 			
 			(not
 				(exists (?p2 - plato)
@@ -87,9 +85,7 @@
                         (not (primero ?p))           ;// ?p NO debe ser un primero
 			(not (segundo_asignado ?d))
 			(not (plato_usado ?p))       ;// ?p no debe haber sido ya usado esa semana
-
-			(<= (+ (calorias_dia ?d) (calorias_plato ?p)) 1500)	;;El número de calorías debe ser menor que 1500
-			(>= (+ (calorias_dia ?d) (calorias_plato ?p)) 1000)	;;El número de calorías debe ser mayor que 1000
+	
 			
 			(not
 			(exists (?p2 - plato)
@@ -117,7 +113,7 @@
 		(and
 			(increase (calorias_dia ?d) (calorias_plato ?p))
 			(increase (precio_total) (precio_plato ?p))
-                        (segundo_asignado ?d)
+            (segundo_asignado ?d)
 			(segundo_asignado_en ?p ?d)
 			(plato_usado ?p)
 		)

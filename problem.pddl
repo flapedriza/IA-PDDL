@@ -59,6 +59,8 @@
 		(and
 			(primero_asignado ?d)
 			(segundo_asignado ?d)
+			(<= (calorias_dia ?d) 1500)
+			(>= (calorias_dia ?d) 1000)
 			(forall (?p - plato)
                         (or
                                 (and
