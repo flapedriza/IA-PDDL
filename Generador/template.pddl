@@ -12,11 +12,23 @@
         (adj dimecres dijous)
         (adj dijous divendres)
 
+		(= (calorias_dia dilluns) 0)
+		(= (calorias_dia dimarts) 0)
+		(= (calorias_dia dimecres) 0)
+		(= (calorias_dia dijous) 0)
+		(= (calorias_dia divendres) 0)
+
 {2}
+
+		(= (precio_total) 0)
 
 {3}
 
 {4}
+
+{5}
+
+{6}
     )
 
     (:goal
@@ -39,4 +51,6 @@
 			)
 		)
     )
+
+	(:metric minimize (coste-total))
 )

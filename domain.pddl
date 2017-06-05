@@ -1,7 +1,15 @@
 (define (domain MENU)
-	(:requirements :strips :typing :adl) ;// :equality no
+	(:requirements :strips :typing :adl :fluents) ;// :equality no
 
 	(:types plato dia tipo - object)
+
+	(:functions
+		(calorias_plato ?p - plato)
+		(calorias_dia ?d - dia)
+		(precio_plato ?p - plato)
+		(precio_total)
+	)
+
 	(:predicates
 
 		(primero ?p - plato) 			;// ?p es un primero
@@ -31,31 +39,40 @@
                         (primero ?p)                 ;// ?p debe ser un primero
 			(not (primero_asignado ?d))
 			(not (plato_usado ?p))       ;// ?p no debe haber sido ya usado esa semana
+
+			(<= (+ (calorias_dia ?d) (calorias_plato ?p)) 1500)	;;El número de calorías debe ser menor que 1500
+			(>= (+ (calorias_dia ?d) (calorias_plato ?p)) 1000)	;;El número de calorías debe ser mayor que 1000
 			
 			(not
-			(exists (?p2 - plato)
-			(and
-                                (segundo_asignado_en ?p2 ?d)
-                                (incomp ?p ?p2)
-                        )))
+				(exists (?p2 - plato)
+					(and
+						(segundo_asignado_en ?p2 ?d)
+						(incomp ?p ?p2)
+					)
+				)
+			)
 
 			(not
-			(exists (?d2 - dia)
-			(and
-                                (or (adj ?d ?d2) (adj ?d2 ?d))
-                                (exists (?p2 - plato)
-                                (and
-                                        (primero_asignado_en ?p2 ?d2)
-                                        (exists (?t - tipo)
-                                        (and
-                                                (es_tipo ?p ?t)
-                                                (es_tipo ?p2 ?t)
-                                        ))
-                                ))
-                        )))
+				(exists (?d2 - dia)
+					(and
+						(or (adj ?d ?d2) (adj ?d2 ?d))
+						(exists (?p2 - plato)
+						(and
+							(primero_asignado_en ?p2 ?d2)
+							(exists (?t - tipo)
+							(and
+								(es_tipo ?p ?t)
+								(es_tipo ?p2 ?t)
+							))
+						))
+					)
+				)
+			)
 		)
 		:effect
 		(and
+			(increase (calorias_dia ?d) (calorias_plato ?p))
+			(increase (precio_total) (precio_plato ?p))
 			(primero_asignado ?d)
 			(primero_asignado_en ?p ?d)
 			(plato_usado ?p)
@@ -70,6 +87,9 @@
                         (not (primero ?p))           ;// ?p NO debe ser un primero
 			(not (segundo_asignado ?d))
 			(not (plato_usado ?p))       ;// ?p no debe haber sido ya usado esa semana
+
+			(<= (+ (calorias_dia ?d) (calorias_plato ?p)) 1500)	;;El número de calorías debe ser menor que 1500
+			(>= (+ (calorias_dia ?d) (calorias_plato ?p)) 1000)	;;El número de calorías debe ser mayor que 1000
 			
 			(not
 			(exists (?p2 - plato)
@@ -95,6 +115,8 @@
 		)
 		:effect
 		(and
+			(increase (calorias_dia ?d) (calorias_plato ?p))
+			(increase (precio_total) (precio_plato ?p))
                         (segundo_asignado ?d)
 			(segundo_asignado_en ?p ?d)
 			(plato_usado ?p)

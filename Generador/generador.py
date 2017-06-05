@@ -85,6 +85,30 @@ def llista_plats(primers, segons):
     return string_plats[:-1]
 
 
+def predicats_calories(primers, segons):
+    allp = set(primers + segons)
+
+    predicats = ''
+
+    for plat in allp:
+        pred = '\t\t(= (calorias_plato {0}) {1})\n'.format(plat.nom, plat.cal)
+        predicats += pred
+
+    return predicats[:-1]
+
+
+def predicats_preus(primers, segons):
+    allp = set(primers + segons)
+
+    predicats = ''
+
+    for plat in allp:
+        pred = '\t\t(= (precio_plato {0}) {1})\n'.format(plat.nom, plat.cal)
+        predicats += pred
+
+    return predicats[:-1]
+
+
 def predicats_primers(primers):
     predicats = ''
 
@@ -167,6 +191,8 @@ def main():
     template = template.format(
         llista_tipus(prim, seg),
         llista_plats(prim, seg),
+        predicats_calories(prim, seg),
+        predicats_preus(prim, seg),
         predicats_primers(prim),
         incomp,
         predicats_tipus(prim, seg)

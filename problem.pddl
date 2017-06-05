@@ -12,6 +12,14 @@
 			(adj dimecres dijous)
 			(adj dijous divendres)
 
+			(= (calorias_dia dilluns) 0)
+			(= (calorias_dia dimarts) 0)
+			(= (calorias_dia dimecres) 0)
+			(= (calorias_dia dijous) 0)
+			(= (calorias_dia divendres) 0)
+
+			(= (precio_total) 0)
+
 			(primero peix1)
 			(primero pasta1)
 			(primero peix2)
@@ -64,4 +72,6 @@
                         ))
 		))
 	)
+
+	(:metric minimize (coste-total))
 )
