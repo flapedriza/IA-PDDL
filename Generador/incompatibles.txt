@@ -1,0 +1,55 @@
+carpaccio de vedella, estofat
+carpaccio de vedella, mandonguilles
+carpaccio de vedella, llom al forn
+carpaccio de vedella, bistec
+carpaccio de vedella, costelles a la planxa
+entrant de pernil, mandonguilles
+entrant de pernil, llom al forn
+entrant de pernil, costelles a la planxa
+carpaccio de tonyina, tonyina amb salsa
+carpaccio de tonyina, salmo a la planxa
+croquetes de bacalla, croquetes de pollastre
+croquetes de bacalla, peix fregit
+croquetes de bacalla, calamars a la romana
+fideua, estofat
+fideua, llom al forn, carn
+fideua, llobarro al forn
+fideua, peix fregit
+fideua, calamars a la romana
+fideua, pastis de peix
+fideua, suquet
+fideua, cocido
+fideua, pesols amb botifarra
+fideua, estofat de mongetes
+paella, llobarro al forn
+paella, peix fregit
+paella, calamars a la romana
+paella, pastis de peix
+paella, suquet
+paella, cocido
+paella, pesols amb botifarra
+paella, estofat de mongetes
+arros a banda, llobarro al forn
+arros a banda, peix fregit
+arros a banda, calamars a la romana
+arros a banda, pastis de peix
+arros a banda, cocido
+arros a banda, pesols amb botifarra
+arros a banda, estofat de mongetes
+mongetes saltejades, estofat de mongetes
+ensaladilla russa, verdures a la brasa
+amanida verda, verdures a la brasa
+amanida de pollastre, pollastre a la planxa
+amanida de pollastre, croquetes de pollastre
+amanida de pollastre, verdures a la brasa
+amanida del camp, verdures a la brasa
+carxofes al forn, verdures a la brasa
+col saltejada, coliflor gratinada
+col saltejada, verdures a la brasa
+macarrons, mandonguilles
+espaguetis bolonyesa, mandonguilles
+lasanya, mandonguilles
+canelons, mandonguilles
+crema de carbassa, verdures a la brasa
+sopa de peix, suquet
+sopa de peix, pastis de peix
