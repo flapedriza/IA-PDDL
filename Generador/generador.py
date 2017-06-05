@@ -149,7 +149,8 @@ parser.add_argument('--seg', '-s', help='Num segons', type=int,
 parser.add_argument(
     '--rand', '-r', help="Genera incompatibilitats a l'atzar", action='store_true')
 
-parser.add_argument('--file', '-f', help='Nom del fitxer generat', type=str,
+parser.add_argument('--file', '-f', help='Nom del fitxer generat, si no s\'informa el nom del'
+                    ' fitxer és aleatori', type=str,
                     default=str(uuid.uuid4()), required=False)
 
 
@@ -171,7 +172,8 @@ def main():
     )
 
     print('Se ha generado un juego de pruebas con'
-          ' {0} primeros, {1} segundos y {2} incompatibilidades'.format(nprim, nseg, len(incomp.split('\n'))))
+          ' {0} primeros, {1} segundos y {2} incompatibilidades'
+          .format(nprim, nseg, len(incomp.split('\n'))))
 
     with open(parsed.file + '.pddl', 'w') as file:
         file.write(template)
