@@ -118,12 +118,13 @@ def genera_incompatibilitats(rand=False, primers=None, segons=None):
             incomp.append((prim.nom, seg.nom))
 
     else:
-        with open('incompatibilitats.txt', 'r') as file:
+        with open('incompatibles.txt', 'r') as file:
             lines = file.readlines()
         for line in lines:
             prim, seg = [plat.strip().replace(' ', '_')
                          for plat in line.split(',')]
-            incomp.append((prim, seg))
+            if any(x.nom == prim for x in primers) and any(x.nom == seg for x in segons):
+                incomp.append((prim, seg))
 
     predicats = ''
 

@@ -7,10 +7,10 @@
 	)
 
     (:init
-    	(adj dilluns dimarts)
-	(adj dimarts dimecres)
-	(adj dimecres dijous)
-	(adj dijous divendres)
+        (adj dilluns dimarts)
+        (adj dimarts dimecres)
+        (adj dimecres dijous)
+        (adj dijous divendres)
 
 {2}
 
@@ -21,20 +21,22 @@
 
     (:goal
 		(forall (?d - dia)
-		(and
-			(primero_asignado ?d)
-			(segundo_asignado ?d)
-			(forall (?p - plato)
-                        (or
-                                (and
-                                        (obligacion ?p ?d)
-                                        (or
-                                                (primero_asignado_en ?p ?d)
-                                                (segundo_asignado_en ?p ?d)
-                                        )
-                                )
-                                (not (obligacion ?p ?d))
-                        ))
-		))
+			(and
+				(primero_asignado ?d)
+				(segundo_asignado ?d)
+				(forall (?p - plato)
+					(or
+						(and
+							(obligacion ?p ?d)
+							(or
+								(primero_asignado_en ?p ?d)
+								(segundo_asignado_en ?p ?d)
+							)
+						)
+						(not (obligacion ?p ?d))
+					)
+				)
+			)
+		)
     )
 )
