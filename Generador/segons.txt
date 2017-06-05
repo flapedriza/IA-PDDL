@@ -1,0 +1,22 @@
+estofat, carn, 9, 900
+mandonguilles, carn, 7, 750
+pollastre a la planxa, carn, 5, 550
+croquetes de pollastre, carn, 7, 750
+llom al forn, carn, 9, 850
+bistec, carn, 6, 700
+costelles a la planxa, carn, 7, 750 
+rap a la planxa, peix, 9, 600
+llobarro al forn, peix, 12, 800
+peix fregit, peix, 6, 750
+calamars a la romana, peix, 7, 800
+salmo a la planxa, peix, 8, 650
+tonyina amb salsa, peix, 10, 700
+suquet, peix, 13, 700
+pastis de peix, peix, 10, 750
+cocido, llegums, 8, 1100
+llenties estofades, llegums, 7, 800
+pesols amb botifarra, llegums, 7, 950
+botifarra amb seques, llegums, 8, 800
+estofat de mongetes, llegums, 10, 850
+verdures a la brasa, verdura, 9, 450
+coliflor gratinada, verdura, 9, 600

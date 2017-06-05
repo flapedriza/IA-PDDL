@@ -1,0 +1,26 @@
+carpaccio de vedella, carn, 11, 500
+entrant de pernil, carn, 12, 600
+carpaccio de tonyina, peix, 10, 500
+croquetes de bacalla, peix, 6, 650
+fideua, peix, 12, 750
+paella, peix, 14, 800
+arros a banda, peix, 13, 750
+gambes a la planxa, peix, 12, 550
+musclos al vapor, peix, 9, 450
+mongetes saltejades, llegums, 7, 600
+ensaladilla russa, verdura, 8, 750
+amanida verda, verdura, 7, 350
+amanida de pollastre, verdura, 9, 450
+amanida del camp, verdura, 8, 450
+carxofes al forn, verdura, 8, 400
+col saltejada, verdura, 7, 500
+macarrons, pasta, 9, 700
+espaguetis bolonyesa, pasta, 8, 750
+lasanya, pasta, 9, 800
+canelons, pasta, 10, 700
+tallarines, pasta, 8, 650
+fideus saltejats, pasta, 6, 600
+sopa de fideus, sopa, 6, 450
+crema de xampinyons, sopa, 8, 550
+crema de carbassa, sopa, 5, 300
+sopa de peix, sopa, 7, 500
